@@ -1,0 +1,17 @@
+-- Made By Kyoichi
+getgenv().AutoChest = true
+while AutoChest do task.wait(.4)
+for i,v in pairs(game.Workspace:GetDescendants()) do
+   if v:IsA("Part") and v.Name == "Chest" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+
+   end
+end
+
+for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+       if v:FindFirstChild("ProximityPrompt") then
+         fireproximityprompt(v.ProximityPrompt)
+       end
+    end
+end
+-- Do not execute more then once
